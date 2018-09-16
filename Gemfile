@@ -42,6 +42,9 @@ gem 'activerecord-import'
 gem 'devise'
 gem 'charwidth'
 
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+gem 'geokit-rails'
+
 #エクセル操作
 gem 'roo'
 
