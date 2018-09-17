@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_15_154613) do
+ActiveRecord::Schema.define(version: 2018_09_16_053740) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "namespace"
@@ -36,6 +36,23 @@ ActiveRecord::Schema.define(version: 2018_09_15_154613) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "drive_places", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "code", null: false
+    t.string "section_type"
+    t.string "name"
+    t.float "lat", default: 0.0, null: false
+    t.float "lon", default: 0.0, null: false
+    t.string "prefecture"
+    t.string "city"
+    t.string "postal_code"
+    t.string "address", null: false
+    t.string "tel"
+    t.text "extra_infos"
+    t.text "options"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
